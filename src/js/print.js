@@ -68,7 +68,7 @@ function performPrint (iframeElement, params) {
   } catch (error) {
     params.onError(error)
   } finally {
-    if (Browser.isFirefox()) {
+      if (Browser.isFirefox() || Browser.isSafari()) {
       // Move the iframe element off-screen and make it invisible
       iframeElement.style.visibility = 'hidden'
       iframeElement.style.left = '-1px'
